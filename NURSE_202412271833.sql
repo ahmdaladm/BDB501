@@ -1,0 +1,7 @@
+INSERT INTO BDB501.NURSE (EMPLOYEEID,WORKINGHOURS) VALUES
+	 (2,8),
+	 (4,8),
+	 (5,10),
+	 (6,8),
+	 (7,9),
+	 (8,10);

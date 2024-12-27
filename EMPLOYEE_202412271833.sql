@@ -1,0 +1,18 @@
+INSERT INTO BDB501.EMPLOYEE (EMPLOYEEID,NAME,SALARY,ADDRESS,PHONENUMBER) VALUES
+	 (1,'Ahmad Jalal',50000000,'Damasacus','+963945861235'),
+	 (2,'Galya Jalil',7000000,'Aleppo','+963978542136'),
+	 (3,'Mohammed Saad',18500000,'Homs','+963978945612'),
+	 (4,'Layal Mohammed',5400000,'Aleppo','+963912364589'),
+	 (5,'Jalal Saeed',7400000,'Homs','+963923456789'),
+	 (6,'Karam Ahmad',9500000,'Latakia','+963978346945'),
+	 (7,'Zubaida Taha',7400000,'Tartous','+963900123666'),
+	 (8,'Fatima Kareem',6000000,'Damasacus','+963925536363'),
+	 (9,'Layal Mahmoud',15000000,'Swieda','+963955898983'),
+	 (10,'Kareem Zayed',17000000,'Aleppo','+963978999634');
+INSERT INTO BDB501.EMPLOYEE (EMPLOYEEID,NAME,SALARY,ADDRESS,PHONENUMBER) VALUES
+	 (11,'Mohammed Ali',19000000,'Swieda','+963848751651'),
+	 (12,'Ali Mustafa',18000000,'Damascus','+963784568915'),
+	 (13,'Saleh Sheikh',18000000,'Aleppo','+963785648915'),
+	 (14,'Ali Loay',18000000,NULL,NULL),
+	 (15,'Loay Jason',20000000,NULL,NULL),
+	 (16,'Jason Kamel',19000000,NULL,NULL);

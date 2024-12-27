@@ -1,0 +1,11 @@
+INSERT INTO BDB501.DOCTOR (EMPLOYEEID,YEARSOFEXPERIENCE) VALUES
+	 (1,10),
+	 (9,8),
+	 (3,7),
+	 (10,7),
+	 (11,8),
+	 (12,7),
+	 (13,9),
+	 (14,15),
+	 (15,20),
+	 (16,9);
