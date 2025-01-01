@@ -1,16 +1,18 @@
 using System;
 using System.Data;
+using System.Numerics;
 using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Selects : Form
     {
         //private string connectionString = "User Id=SYSTEM;Password=Adam1234;Data Source=localhost:1521/orcl;Connection Timeout=30;";
-        private string connectionString = "User Id=SYSTEM;Password=Adam1234;Data Source=localhost:1521/test;Connection Timeout=30;";
+        private string connectionString = "User Id=SYSTEM;Password=Ahmad2002;Data Source=localhost:1521/HOSP;Connection Timeout=30;";
 
-        public Form1()
+        public Selects()
         {
             //private string num1= TextBox1.Text;
             InitializeComponent();
@@ -19,7 +21,7 @@ namespace WinFormsApp1
 
         private async void button1_Click(object sender, EventArgs e)
         {
-           await  using (OracleConnection conn = new OracleConnection(connectionString))
+            await using (OracleConnection conn = new OracleConnection(connectionString))
             {
                 try
                 {
@@ -27,7 +29,7 @@ namespace WinFormsApp1
                     MessageBox.Show("Attempting to connect...");
                     MessageBox.Show("Connection successful!");
 
-                    string query = "SELECT * FROM DOCTOR";
+                    string query = "SELECT * FROM BDB501.Doctor";
                     OracleCommand cmd = new OracleCommand(query, conn);
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -56,10 +58,10 @@ namespace WinFormsApp1
                     conn.Open();
                     MessageBox.Show("Attempting to connect...");
                     MessageBox.Show("Connection successful!");
-
-                    string query =  "SELECT SUM(BillAmount) AS TotalAmount FROM Patients"+
-                                    "WHERE Disease LIKE '%Liver%'"+
-                                    "AND EXTRACT(YEAR FROM DischargeDate) = 2024;";
+                    string query = @"SELECT SUM(BillAmount) AS TotalAmount 
+                                    FROM BDB501.Patient 
+                                    WHERE Disease LIKE '%Liver Cirrhosis%' 
+                                    AND EXTRACT(YEAR FROM DischargeDate) = 2024";
                     OracleCommand cmd = new OracleCommand(query, conn);
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -80,7 +82,7 @@ namespace WinFormsApp1
         }
         private async void Select_two(object sender, EventArgs e)
         {
-            
+
             await using (OracleConnection conn = new OracleConnection(connectionString))
             {
                 try
@@ -88,11 +90,9 @@ namespace WinFormsApp1
                     conn.Open();
                     MessageBox.Show("Attempting to connect...");
                     MessageBox.Show("Connection successful!");
+                    string query = @"SELECT BDB501.Employee.Name AS DoctorName, SUM(BDB501.Patient.BillAmount) AS TotalSurgeryAmount FROM BDB501.Employee JOIN BDB501.Doctor ON BDB501.Employee.EmployeeID = BDB501.Doctor.EmployeeID JOIN BDB501.Patient ON BDB501.Doctor.EmployeeID = BDB501.Patient.DoctorID WHERE EXTRACT(YEAR FROM BDB501.Patient.DischargeDate) = 2024 GROUP BY BDB501.Employee.Name ORDER BY TotalSurgeryAmount DESC FETCH FIRST 1 ROW ONLY";
 
-                    string query = "SELECT d.Name AS DoctorName, COUNT(s.SurgeryID) AS SurgeryCount, SUM(s.AmountCharged) AS TotalAmount" +
-                        "FROM Doctors d JOIN Surgeries s ON d.EmployeeID = s.DoctorID" +
-                        "WHERE EXTRACT(YEAR FROM s.SurgeryDate) = 2024" +
-                        "GROUP BY d.Name ORDER BY SurgeryCount DESC FETCH FIRST 1 ROWS ONLY;";
+
                     OracleCommand cmd = new OracleCommand(query, conn);
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -112,6 +112,10 @@ namespace WinFormsApp1
             }
 
         }
-        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

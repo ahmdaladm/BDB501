@@ -44,3 +44,28 @@ D:\Visual_studio_projects\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\refint\WinF
 D:\Visual_studio_projects\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
 D:\Visual_studio_projects\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
 D:\Visual_studio_projects\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\WinFormsApp1.exe
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\WinFormsApp1.deps.json
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\WinFormsApp1.runtimeconfig.json
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\WinFormsApp1.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\WinFormsApp1.pdb
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\Oracle.ManagedDataAccess.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\System.DirectoryServices.Protocols.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\linux\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\osx\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.DirectoryServices.Protocols.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.sourcelink.json
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinForms.E4050A35.Up2Date
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\refint\WinFormsApp1.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.pdb
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.genruntimeconfig.cache
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\ref\WinFormsApp1.dll
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Employee.resources
+C:\Users\Ahmad\Desktop\University\GitHub Repostries\BDB501\BDBL\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.Selects.resources
