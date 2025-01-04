@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Ahmad\\Desktop\\University\\GitHub Repostries\\BDB501\\BDBL\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\ahmad\\desktop\\university\\github repostries\\bdb501\\bdbl\\winformsapp1\\selects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\selects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\lenovo\\desktop\\bdbl 3\\bdb501\\bdbl\\winformsapp1\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\lenovo\\desktop\\bdbl 3\\bdb501\\bdbl\\winformsapp1\\batient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\batient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\lenovo\\desktop\\bdbl 3\\bdb501\\bdbl\\winformsapp1\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|c:\\users\\lenovo\\desktop\\bdbl 3\\bdb501\\bdbl\\winformsapp1\\batient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C38CBFB-73C0-49CA-A0C7-0ACCD7525FA6}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\batient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Selects.cs",
-              "DocumentMoniker": "C:\\Users\\Ahmad\\Desktop\\University\\GitHub Repostries\\BDB501\\BDBL\\WinFormsApp1\\Selects.cs",
-              "RelativeDocumentMoniker": "WinFormsApp1\\Selects.cs",
-              "ToolTip": "C:\\Users\\Ahmad\\Desktop\\University\\GitHub Repostries\\BDB501\\BDBL\\WinFormsApp1\\Selects.cs",
-              "RelativeToolTip": "WinFormsApp1\\Selects.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Employee.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Employee.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Employee.cs",
+              "RelativeToolTip": "WinFormsApp1\\Employee.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAowMkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T17:55:55.954Z",
+              "WhenOpened": "2025-01-04T01:45:31.4Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Employee.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Employee.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Employee.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Employee.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Employee.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T01:45:26.535Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Batient.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Batient.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Batient.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Batient.cs",
+              "RelativeToolTip": "WinFormsApp1\\Batient.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAuwDoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T00:40:50.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Batient.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Batient.cs",
+              "RelativeDocumentMoniker": "WinFormsApp1\\Batient.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\BDBL 3\\BDB501\\BDBL\\WinFormsApp1\\Batient.cs [Design]",
+              "RelativeToolTip": "WinFormsApp1\\Batient.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T00:28:46.588Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

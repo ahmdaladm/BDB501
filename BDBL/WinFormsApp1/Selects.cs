@@ -9,8 +9,8 @@ namespace WinFormsApp1
 {
     public partial class Selects : Form
     {
-        //private string connectionString = "User Id=SYSTEM;Password=Adam1234;Data Source=localhost:1521/orcl;Connection Timeout=30;";
-        private string connectionString = "User Id=SYSTEM;Password=Ahmad2002;Data Source=localhost:1521/HOSP;Connection Timeout=30;";
+        private string connectionString = "User Id=BDB501;Password=Adam1234;Data Source=localhost:1521/test;Connection Timeout=30;";
+        //private string connectionString = "User Id=SYSTEM;Password=Ahmad2002;Data Source=localhost:1521/HOSP;Connection Timeout=30;";
 
         public Selects()
         {
@@ -116,6 +116,18 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            employee.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Batient batient = new Batient();
+            batient.Show();
         }
     }
 }
