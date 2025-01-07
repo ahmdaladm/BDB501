@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Oracle.ManagedDataAccess.Client;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 
+
 namespace WinFormsApp1
 {
     public partial class Selects : Form
@@ -29,7 +30,8 @@ namespace WinFormsApp1
                     MessageBox.Show("Attempting to connect...");
                     MessageBox.Show("Connection successful!");
 
-                    string query = "SELECT * FROM BDB501.Doctor";
+                    //string query = "SELECT * FROM BDB501.Doctor";
+                    string query = "SELECT DOCTOR.EMPLOYEEID AS d_id, NURSE.EMPLOYEEID AS n_id FROM DOCTOR INNER JOIN NURSE ON DOCTOR.EMPLOYEEID <> NURSE.EMPLOYEEID;";
                     OracleCommand cmd = new OracleCommand(query, conn);
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -66,6 +68,7 @@ namespace WinFormsApp1
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
+                    
 
                     dataGridView1.DataSource = dt;
                 }

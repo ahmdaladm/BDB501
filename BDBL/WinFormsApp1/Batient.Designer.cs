@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            b_id = new TextBox();
+            p_id = new TextBox();
             name = new TextBox();
             age = new TextBox();
-            d_id = new TextBox();
-            n_id = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -44,24 +42,26 @@
             label9 = new Label();
             billAmount = new TextBox();
             label10 = new Label();
-            DiagnosisType = new TextBox();
-            b_output = new Label();
+            p_output = new Label();
             add = new Button();
             clearButton = new Button();
             label11 = new Label();
-            comboBox1 = new ComboBox();
+            DisChargeStatus = new ComboBox();
+            Disease = new ComboBox();
+            DiagnosisType = new ComboBox();
             DisChargeDate = new DateTimePicker();
-            comboBox2 = new ComboBox();
+            d_id = new ComboBox();
+            n_id = new ComboBox();
             SuspendLayout();
             // 
-            // b_id
+            // p_id
             // 
-            b_id.Enabled = false;
-            b_id.Location = new Point(183, 75);
-            b_id.Name = "b_id";
-            b_id.Size = new Size(198, 27);
-            b_id.TabIndex = 0;
-            b_id.TextAlign = HorizontalAlignment.Center;
+            p_id.Enabled = false;
+            p_id.Location = new Point(183, 75);
+            p_id.Name = "p_id";
+            p_id.Size = new Size(198, 27);
+            p_id.TabIndex = 0;
+            p_id.TextAlign = HorizontalAlignment.Center;
             // 
             // name
             // 
@@ -78,22 +78,6 @@
             age.Size = new Size(198, 27);
             age.TabIndex = 3;
             age.TextAlign = HorizontalAlignment.Center;
-            // 
-            // d_id
-            // 
-            d_id.Location = new Point(183, 292);
-            d_id.Name = "d_id";
-            d_id.Size = new Size(198, 27);
-            d_id.TabIndex = 4;
-            d_id.TextAlign = HorizontalAlignment.Center;
-            // 
-            // n_id
-            // 
-            n_id.Location = new Point(562, 75);
-            n_id.Name = "n_id";
-            n_id.Size = new Size(198, 27);
-            n_id.TabIndex = 5;
-            n_id.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -203,23 +187,15 @@
             label10.TabIndex = 19;
             label10.Text = "Diagnosis Type";
             // 
-            // DiagnosisType
+            // p_output
             // 
-            DiagnosisType.Location = new Point(562, 292);
-            DiagnosisType.Name = "DiagnosisType";
-            DiagnosisType.Size = new Size(198, 27);
-            DiagnosisType.TabIndex = 18;
-            DiagnosisType.TextAlign = HorizontalAlignment.Center;
-            // 
-            // b_output
-            // 
-            b_output.AutoSize = true;
-            b_output.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            b_output.Location = new Point(45, 360);
-            b_output.Name = "b_output";
-            b_output.Size = new Size(25, 23);
-            b_output.TabIndex = 20;
-            b_output.Text = "...";
+            p_output.AutoSize = true;
+            p_output.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            p_output.Location = new Point(45, 360);
+            p_output.Name = "p_output";
+            p_output.Size = new Size(25, 23);
+            p_output.TabIndex = 20;
+            p_output.Text = "...";
             // 
             // add
             // 
@@ -230,6 +206,7 @@
             add.TabIndex = 21;
             add.Text = "Add";
             add.UseVisualStyleBackColor = true;
+            add.Click += Add_Click;
             // 
             // clearButton
             // 
@@ -240,6 +217,7 @@
             clearButton.TabIndex = 22;
             clearButton.Text = "Clear";
             clearButton.UseVisualStyleBackColor = true;
+            clearButton.Click += clearButton_Click;
             // 
             // label11
             // 
@@ -251,50 +229,84 @@
             label11.TabIndex = 23;
             label11.Text = "Batient Information\r\nPlease Fill The Below Fild  ";
             // 
-            // comboBox1
+            // DisChargeStatus
             // 
-            comboBox1.AutoCompleteMode = AutoCompleteMode.Append;
-            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Recovery", "Review", "Death" });
-            comboBox1.Location = new Point(562, 186);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(198, 28);
-            comboBox1.TabIndex = 24;
+            DisChargeStatus.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            DisChargeStatus.AutoCompleteSource = AutoCompleteSource.ListItems;
+            DisChargeStatus.FormattingEnabled = true;
+            DisChargeStatus.Items.AddRange(new object[] { "Recovery", "Review", "Death" });
+            DisChargeStatus.Location = new Point(562, 186);
+            DisChargeStatus.Name = "DisChargeStatus";
+            DisChargeStatus.Size = new Size(198, 28);
+            DisChargeStatus.TabIndex = 24;
+            // 
+            // Disease
+            // 
+            Disease.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            Disease.AutoCompleteSource = AutoCompleteSource.ListItems;
+            Disease.FormattingEnabled = true;
+            Disease.Items.AddRange(new object[] { "Appendicitis", "Ovarian Cancer", "Pancreatitis", "Varicose Veins", "Liver Cirrhosis", "Breast Cancer", "COVID-19", "Ear Infections", "Tooth pathology", "Endometriosis", "Uterine Fibroids", "Atopic Dermatitis" });
+            Disease.Location = new Point(183, 187);
+            Disease.Name = "Disease";
+            Disease.Size = new Size(198, 28);
+            Disease.TabIndex = 27;
+            // 
+            // DiagnosisType
+            // 
+            DiagnosisType.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            DiagnosisType.AutoCompleteSource = AutoCompleteSource.ListItems;
+            DiagnosisType.FormattingEnabled = true;
+            DiagnosisType.Items.AddRange(new object[] { "Surgery", "Vaccination", "Prescription" });
+            DiagnosisType.Location = new Point(562, 293);
+            DiagnosisType.Name = "DiagnosisType";
+            DiagnosisType.Size = new Size(198, 28);
+            DiagnosisType.TabIndex = 28;
             // 
             // DisChargeDate
             // 
             DisChargeDate.Location = new Point(562, 131);
             DisChargeDate.Name = "DisChargeDate";
             DisChargeDate.Size = new Size(198, 27);
-            DisChargeDate.TabIndex = 26;
+            DisChargeDate.TabIndex = 29;
             // 
-            // comboBox2
+            // d_id
             // 
-            comboBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox2.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Appendicitis", "Ovarian Cancer", "Pancreatitis", "Varicose Veins", "Liver Cirrhosis", "Breast Cancer", "COVID-19", "Ear Infections", "Tooth pathology", "Endometriosis", "Uterine Fibroids", "Atopic Dermatitis" });
-            comboBox2.Location = new Point(183, 187);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(198, 28);
-            comboBox2.TabIndex = 27;
+            d_id.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            d_id.AutoCompleteSource = AutoCompleteSource.ListItems;
+            d_id.Location = new Point(183, 296);
+            d_id.Name = "d_id";
+            d_id.Size = new Size(198, 28);
+            d_id.TabIndex = 32;
+            d_id.Leave += check_id;
+            // 
+            // n_id
+            // 
+            n_id.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            n_id.AutoCompleteSource = AutoCompleteSource.ListItems;
+            n_id.FormattingEnabled = true;
+            n_id.Location = new Point(562, 79);
+            n_id.Name = "n_id";
+            n_id.Size = new Size(198, 28);
+            n_id.TabIndex = 33;
+            n_id.Leave += check_id;
             // 
             // Batient
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Indigo;
-            ClientSize = new Size(800, 450);
-            Controls.Add(comboBox2);
+            ClientSize = new Size(794, 448);
+            Controls.Add(n_id);
+            Controls.Add(d_id);
             Controls.Add(DisChargeDate);
-            Controls.Add(comboBox1);
+            Controls.Add(DiagnosisType);
+            Controls.Add(Disease);
+            Controls.Add(DisChargeStatus);
             Controls.Add(label11);
             Controls.Add(clearButton);
             Controls.Add(add);
-            Controls.Add(b_output);
+            Controls.Add(p_output);
             Controls.Add(label10);
-            Controls.Add(DiagnosisType);
             Controls.Add(label9);
             Controls.Add(billAmount);
             Controls.Add(label8);
@@ -305,11 +317,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(n_id);
-            Controls.Add(d_id);
             Controls.Add(age);
             Controls.Add(name);
-            Controls.Add(b_id);
+            Controls.Add(p_id);
             ForeColor = SystemColors.ControlLightLight;
             Name = "Batient";
             Text = "Batient";
@@ -320,11 +330,9 @@
 
         #endregion
 
-        private TextBox b_id;
+        private TextBox p_id;
         private TextBox name;
         private TextBox age;
-        private TextBox d_id;
-        private TextBox n_id;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -336,15 +344,17 @@
         private Label label9;
         private TextBox billAmount;
         private Label label10;
-        private TextBox DiagnosisType;
-        private Label b_output;
+        private Label p_output;
         private Button add;
         private Button clearButton;
         private Label label11;
-        private ComboBox comboBox1;
+        private ComboBox DisChargeStatus;
         private TextBox disChargeDate;
         private Button button1;
+        private ComboBox Disease;
+        private ComboBox DiagnosisType;
         private DateTimePicker DisChargeDate;
-        private ComboBox comboBox2;
+        private ComboBox d_id;
+        private ComboBox n_id;
     }
 }
