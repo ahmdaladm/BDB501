@@ -10,8 +10,8 @@ namespace WinFormsApp1
 {
     public partial class Selects : Form
     {
-        private string connectionString = "User Id=BDB501;Password=Adam1234;Data Source=localhost:1521/test;Connection Timeout=30;";
-        //private string connectionString = "User Id=SYSTEM;Password=Ahmad2002;Data Source=localhost:1521/HOSP;Connection Timeout=30;";
+        //private string connectionString = "User Id=BDB501;Password=Adam1234;Data Source=localhost:1521/test;Connection Timeout=30;";
+        private string connectionString = "User Id=SYSTEM;Password=Ahmad2002;Data Source=localhost:1521/HOSP;Connection Timeout=30;";
 
         public Selects()
         {
@@ -31,7 +31,7 @@ namespace WinFormsApp1
                     MessageBox.Show("Connection successful!");
 
                     //string query = "SELECT * FROM BDB501.Doctor";
-                    string query = "SELECT DOCTOR.EMPLOYEEID AS d_id, NURSE.EMPLOYEEID AS n_id FROM DOCTOR INNER JOIN NURSE ON DOCTOR.EMPLOYEEID <> NURSE.EMPLOYEEID;";
+                    string query = "SELECT DOCTOR.EMPLOYEEID AS d_id, NURSE.EMPLOYEEID AS n_id FROM DOCTOR INNER JOIN NURSE ON DOCTOR.EMPLOYEEID <> NURSE.EMPLOYEEID";
                     OracleCommand cmd = new OracleCommand(query, conn);
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -68,7 +68,7 @@ namespace WinFormsApp1
                     OracleDataAdapter adapter = new OracleDataAdapter(cmd);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    
+
 
                     dataGridView1.DataSource = dt;
                 }
@@ -93,7 +93,13 @@ namespace WinFormsApp1
                     conn.Open();
                     MessageBox.Show("Attempting to connect...");
                     MessageBox.Show("Connection successful!");
-                    string query = @"SELECT BDB501.Employee.Name AS DoctorName, SUM(BDB501.Patient.BillAmount) AS TotalSurgeryAmount FROM BDB501.Employee JOIN BDB501.Doctor ON BDB501.Employee.EmployeeID = BDB501.Doctor.EmployeeID JOIN BDB501.Patient ON BDB501.Doctor.EmployeeID = BDB501.Patient.DoctorID WHERE EXTRACT(YEAR FROM BDB501.Patient.DischargeDate) = 2024 GROUP BY BDB501.Employee.Name ORDER BY TotalSurgeryAmount DESC FETCH FIRST 1 ROW ONLY";
+                    string query = @"SELECT BDB501.Employee.Name AS DoctorName,
+                    SUM(BDB501.Patient.BillAmount) AS TotalSurgeryAmount,
+                    COUNT (*) AS TotalSurgeries 
+                    FROM BDB501.Employee 
+                    JOIN BDB501.Doctor ON BDB501.Employee.EmployeeID = BDB501.Doctor.EmployeeID 
+                    JOIN BDB501.Patient ON BDB501.Doctor.EmployeeID = BDB501.Patient.DoctorID 
+                    WHERE EXTRACT(YEAR FROM BDB501.Patient.DischargeDate) = 2024 GROUP BY BDB501.Employee.Name ORDER BY TotalSurgeryAmount DESC FETCH FIRST 1 ROW ONLY";
 
 
                     OracleCommand cmd = new OracleCommand(query, conn);
@@ -129,8 +135,14 @@ namespace WinFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Batient batient = new Batient();
-            batient.Show();
+            Patient patient = new Patient();
+            patient.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Clinics_Labs clinics_Labs = new Clinics_Labs();
+            clinics_Labs.Show();
         }
     }
 }
